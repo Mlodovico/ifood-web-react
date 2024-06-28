@@ -1,5 +1,5 @@
 import { useTheme } from "../../context/ThemeContext";
-import { Container, ConfigOptionsWrapper, SubjectContainer, Button } from "./styles";
+import { Container, ConfigOptionsWrapper, SubjectContainer, Button, Subject } from "./styles";
 
 export const Header = () => {
   const { toggleTheme } = useTheme();
@@ -7,7 +7,9 @@ export const Header = () => {
   return (
     <Container>
       <SubjectContainer>
-        <h1>Header</h1>
+      <Subject>Categorias</Subject>
+      <Subject>Categorias</Subject>
+      <Subject>Categorias</Subject>
       </SubjectContainer>
       <ConfigOptionsWrapper>
         <Button>Logar</Button>

@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80px;
     width:  60%;
     border-radius: 12px;
     background-color: #ea1d2c;
@@ -31,7 +32,7 @@ export const Button = styled.button`
     color: ${props => props.theme};
     padding: 10px 20px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 48px;
     border: none;
     font-weight: bold;
 
@@ -41,3 +42,9 @@ export const Button = styled.button`
         cursor: pointer;
     }
 `;
+
+export const Subject = styled.p`
+    margin: 10px;
+    color: ${props => props.theme};
+    font-weight: bold;
+`
