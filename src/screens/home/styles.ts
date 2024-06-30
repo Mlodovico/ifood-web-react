@@ -5,8 +5,4 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     height: 100vh;
-
-    @media (min-width: 1199px) {
-        padding-top: 20px;
-    }
 `

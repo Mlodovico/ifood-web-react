@@ -12,6 +12,7 @@ export const Container = styled.div`
     @media (min-width: 600px) and (max-width: 1199px) {
         width: 100%;
         border-radius: 0px;
+        margin-top: 20px;
     }
 `
 
