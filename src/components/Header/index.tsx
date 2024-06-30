@@ -13,6 +13,7 @@ import {
 export const HeaderComponent = () => {
   const { toggleTheme } = useTheme();
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
+  const [showSignUpModal, setShowSignUpModal] = useState<boolean>(false);
 
   const toggleModal = () => {
     setShowLoginModal(!showLoginModal);
@@ -30,12 +31,15 @@ export const HeaderComponent = () => {
           <Button onClick={() => toggleModal()}>
             Logar
           </Button>
-          <Button>Criar conta</Button>
+          <Button onClick={() => setShowSignUpModal(!showSignUpModal)}>Criar conta</Button>
           <Button onClick={toggleTheme}>Toggle Theme</Button>
         </ConfigOptionsWrapper>
       </Container>
       <ModalComponent flagModal={showLoginModal}>
         <h1>Login Modal</h1>
+      </ModalComponent>
+      <ModalComponent flagModal={showSignUpModal}>
+        <h1>Cadastro Modal</h1>
       </ModalComponent>
     </>
   );

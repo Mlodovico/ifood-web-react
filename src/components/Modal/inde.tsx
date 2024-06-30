@@ -9,8 +9,6 @@ interface ModalComponentProps {
 export const ModalComponent: React.FC<ModalComponentProps> = ({ children, flagModal }) => {
   const [showModal, setShowModal] = useState(flagModal);
 
-  console.log(flagModal);
-
   useEffect(() => {
     setShowModal(flagModal);
 }, [flagModal]);
