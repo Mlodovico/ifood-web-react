@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 import { Container, Modal } from "./styles";
 
 interface ModalComponentProps {
@@ -6,7 +6,7 @@ interface ModalComponentProps {
   flagModal: boolean;
 }
 
-export const ModalComponent: React.FC<ModalComponentProps> = ({ children, flagModal }) => {
+export const ModalComponent: FC<ModalComponentProps> = ({ children, flagModal }) => {
   const [showModal, setShowModal] = useState(flagModal);
 
   useEffect(() => {

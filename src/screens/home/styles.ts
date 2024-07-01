@@ -6,3 +6,10 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
 `
+
+export const Carousel = styled.div`
+    display: flex;
+    justify-content: space-around;
+    border-radius: 12px;
+    opacity: 0.7;
+`
