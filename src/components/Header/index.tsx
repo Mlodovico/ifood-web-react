@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import {  useEffect, useState, FC } from "react";
 
 import { useTheme } from "../../context/ThemeContext";
-import { ModalComponent } from "../Modal/inde";
+import { ModalComponent } from "../Modal";
 import {
   Container,
   ConfigOptionsWrapper,
@@ -10,7 +10,7 @@ import {
   Subject,
 } from "./styles";
 
-export const HeaderComponent = () => {
+export const HeaderComponent: FC = () => {
   const { toggleTheme } = useTheme();
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
   const [showSignUpModal, setShowSignUpModal] = useState<boolean>(false);
@@ -21,7 +21,7 @@ export const HeaderComponent = () => {
 
   return (
     <>
-      <Container>
+      <Container id="header">
         <SubjectContainer>
           <Subject>Home</Subject>
           <Subject>Restaurants</Subject>
@@ -31,8 +31,8 @@ export const HeaderComponent = () => {
           <Button onClick={() => toggleModal()}>
             Logar
           </Button>
-          <Button onClick={() => setShowSignUpModal(!showSignUpModal)}>Criar conta</Button>
-          <Button onClick={toggleTheme}>Toggle Theme</Button>
+          <Button className="sign-up-button-modal" onClick={() => setShowSignUpModal(!showSignUpModal)}>Criar conta</Button>
+          <Button className="toggle-button-theme" onClick={toggleTheme}>Toggle Theme</Button>
         </ConfigOptionsWrapper>
       </Container>
       <ModalComponent flagModal={showLoginModal}>
