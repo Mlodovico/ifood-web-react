@@ -1,11 +1,19 @@
 import React from 'react';
 
-import { Container } from "./styles";
+import { Container, Title, Subtitle } from "./styles";
 
-export const CardsComponent = () => {
+interface CardsComponentsProps {
+    title: string;
+    subtitle: string;
+}
+
+export const CardsComponent = ( props: CardsComponentsProps) => {
+    const { title, subtitle } = props;
+
     return (
         <Container>
-            <h1>Cards</h1>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
         </Container>
     )
 }
