@@ -18,7 +18,7 @@ export const Carousel = styled.div`
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  width: 100%; // Ajustar a largura do carrossel conforme necessário
+  width: 100%;
 
   &::-webkit-scrollbar {
     display: none;

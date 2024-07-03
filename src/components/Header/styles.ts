@@ -50,3 +50,22 @@ export const Subject = styled.p`
     color: ${props => props.theme};
     font-weight: bold;
 `
+
+export const ModalLoginTitle = styled.p`
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 1rem;
+`
+export const ModalLoginDescrition = styled.p`
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 1rem;
+`
+export const ModalLoginInput = styled.input`
+    width: 90%;
+    height: 40px;
+    border-radius: 12px;
+    margin: 20px;
+`
+export const ModalLoginButton = styled.button``

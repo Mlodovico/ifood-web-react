@@ -1,4 +1,4 @@
-import {  useEffect, useState, FC } from "react";
+import { useEffect, useState, FC } from "react";
 
 import { useTheme } from "../../context/ThemeContext";
 import { ModalComponent } from "../Modal";
@@ -8,6 +8,10 @@ import {
   SubjectContainer,
   Button,
   Subject,
+  ModalLoginTitle,
+  ModalLoginDescrition,
+  ModalLoginInput,
+  ModalLoginButton,
 } from "./styles";
 
 export const HeaderComponent: FC = () => {
@@ -28,15 +32,26 @@ export const HeaderComponent: FC = () => {
           <Subject>Drinks</Subject>
         </SubjectContainer>
         <ConfigOptionsWrapper>
-          <Button onClick={() => toggleModal()}>
-            Logar
+          <Button onClick={() => toggleModal()}>Logar</Button>
+          <Button
+            className="sign-up-button-modal"
+            onClick={() => setShowSignUpModal(!showSignUpModal)}
+          >
+            Criar conta
           </Button>
-          <Button className="sign-up-button-modal" onClick={() => setShowSignUpModal(!showSignUpModal)}>Criar conta</Button>
-          <Button className="toggle-button-theme" onClick={toggleTheme}>Toggle Theme</Button>
+          <Button className="toggle-button-theme" onClick={toggleTheme}>
+            Toggle Theme
+          </Button>
         </ConfigOptionsWrapper>
       </Container>
       <ModalComponent flagModal={showLoginModal}>
-        <h1>Login Modal</h1>
+        <ModalLoginTitle>Log in</ModalLoginTitle>
+        <ModalLoginDescrition>
+          Coloque seus dados para acessar sua conta
+        </ModalLoginDescrition>
+        <ModalLoginInput placeholder="Email" type="email" autoFocus />
+        <ModalLoginInput placeholder="Password" type="password" />
+        <ModalLoginButton>Logar</ModalLoginButton>
       </ModalComponent>
       <ModalComponent flagModal={showSignUpModal}>
         <h1>Cadastro Modal</h1>
