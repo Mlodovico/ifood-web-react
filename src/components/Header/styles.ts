@@ -55,29 +55,31 @@ export const ModalLoginTitle = styled.p`
   font-size: 1.5rem;
   color: #000000;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 1rem;
 `;
+
 export const ModalLoginDescrition = styled.p`
   font-size: 1rem;
   color: #000000;
   text-align: center;
   margin-bottom: 1rem;
 `;
-export const ModalLoginInput = styled.input`
-  width: 90%;
-  height: 40px;
-  border-radius: 12px;
-  margin: 20px;
-  border: none;
-  background: #fefefe;
 
-  :focus {
-    outline: none;
+export const ModalLoginInput = styled.input`
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  background: #DCDCDC;
+
+  ::focus {
     border-color: red;
   }
 `;
+
 export const ModalLoginButton = styled.button`
-  width: 90%;
+  width: 100%;
   height: 50px;
   border-radius: 12px;
   font-weight: bold;
@@ -85,4 +87,19 @@ export const ModalLoginButton = styled.button`
   background-color: red;
   border: none;
   color: #ffffff;
+`;
+
+export const ModalLoginInputText = styled.p`
+  font-size: 1rem;
+  color: #000000;
+  text-align: left;
+`;
+
+export const ModalLoginWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 `;

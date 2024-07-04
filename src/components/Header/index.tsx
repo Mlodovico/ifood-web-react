@@ -12,6 +12,8 @@ import {
   ModalLoginDescrition,
   ModalLoginInput,
   ModalLoginButton,
+  ModalLoginInputText,
+  ModalLoginWrapper,
 } from "./styles";
 
 export const HeaderComponent: FC = () => {
@@ -45,14 +47,22 @@ export const HeaderComponent: FC = () => {
         </ConfigOptionsWrapper>
       </Container>
       <ModalComponent flagModal={showLoginModal}>
-        <ModalLoginTitle>Acesse sua conta</ModalLoginTitle>
-        <ModalLoginDescrition>
-          Coloque seus dados para acessar sua conta no ifood e fazer seus
-          pedidos
-        </ModalLoginDescrition>
-        <ModalLoginInput placeholder="Email" type="email" autoFocus />
-        <ModalLoginInput placeholder="Password" type="password" />
-        <ModalLoginButton>Logar</ModalLoginButton>
+        <ModalLoginWrapper>
+          <div>
+            <ModalLoginTitle>Acesse sua conta</ModalLoginTitle>
+            <ModalLoginDescrition>
+              Coloque seus dados para acessar sua conta no ifood e fazer seus
+              pedidos
+            </ModalLoginDescrition>
+            <ModalLoginInputText>Email</ModalLoginInputText>
+            <ModalLoginInput placeholder="Email" type="email" autoFocus />
+            <ModalLoginInputText>Senha</ModalLoginInputText>
+            <ModalLoginInput placeholder="Password" type="password" />
+          </div>
+          <div>
+            <ModalLoginButton>Acessar</ModalLoginButton>
+          </div>
+        </ModalLoginWrapper>
       </ModalComponent>
       <ModalComponent flagModal={showSignUpModal}>
         <h1>Cadastro Modal</h1>
