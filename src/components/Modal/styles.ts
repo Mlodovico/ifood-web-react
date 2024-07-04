@@ -15,7 +15,6 @@ export const Modal = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 40%;
     width: 28rem;
     padding: 20px;

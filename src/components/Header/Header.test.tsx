@@ -41,7 +41,7 @@ describe("HeaderComponent", () => {
     const loginButton = screen.getByText("Logar");
     fireEvent.click(loginButton);
 
-    expect(screen.getByText("Login Modal")).toBeInTheDocument();
+    expect(screen.getByText("Log In")).toBeInTheDocument();
 
     fireEvent.click(loginButton);
 

@@ -45,9 +45,10 @@ export const HeaderComponent: FC = () => {
         </ConfigOptionsWrapper>
       </Container>
       <ModalComponent flagModal={showLoginModal}>
-        <ModalLoginTitle>Log in</ModalLoginTitle>
+        <ModalLoginTitle>Acesse sua conta</ModalLoginTitle>
         <ModalLoginDescrition>
-          Coloque seus dados para acessar sua conta
+          Coloque seus dados para acessar sua conta no ifood e fazer seus
+          pedidos
         </ModalLoginDescrition>
         <ModalLoginInput placeholder="Email" type="email" autoFocus />
         <ModalLoginInput placeholder="Password" type="password" />
