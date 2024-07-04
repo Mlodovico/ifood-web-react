@@ -17,7 +17,7 @@ export const ModalComponent: FC<ModalComponentProps> = ({ children, flagModal })
     <>
       {showModal && (
         <Container onClick={() => setShowModal(!showModal)}>
-          <Modal>{children}</Modal>
+          <Modal onClick={(e) => e.stopPropagation()}>{children}</Modal>
         </Container>
       )}
     </>
