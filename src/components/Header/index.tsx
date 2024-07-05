@@ -51,7 +51,13 @@ export const HeaderComponent: FC = () => {
     return formData.password === password ? true : false;
   };
 
-  console.log(formData);
+  const sendSignUp = () => {
+    if (checkPassword(formData.password)) {
+      console.log(formData);
+    } else {
+      formData.password = "";
+    }
+  };
 
   return (
     <>
@@ -157,7 +163,7 @@ export const HeaderComponent: FC = () => {
             width: "100%",
           }}
         >
-          <ModalLoginButton>Cadastrar</ModalLoginButton>
+          <ModalLoginButton onClick={() => sendSignUp()}>Cadastrar</ModalLoginButton>
         </div>
       </ModalComponent>
     </>
