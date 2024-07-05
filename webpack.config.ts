@@ -1,5 +1,3 @@
-import { template } from "@babel/core";
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -17,7 +15,12 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: {
+                    loader: 'ts-loader',
+                    options: {
+                        configFile: 'tsconfig.build.json'
+                    }
+                },
                 exclude: /node_modules/
             },
             {
