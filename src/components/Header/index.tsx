@@ -59,13 +59,37 @@ export const HeaderComponent: FC = () => {
             <ModalLoginInputText>Senha</ModalLoginInputText>
             <ModalLoginInput placeholder="Password" type="password" />
           </div>
-          <div>
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
             <ModalLoginButton>Acessar</ModalLoginButton>
           </div>
         </ModalLoginWrapper>
       </ModalComponent>
       <ModalComponent flagModal={showSignUpModal}>
-        <h1>Cadastro Modal</h1>
+        <div>
+          <ModalLoginTitle>Acesse sua conta</ModalLoginTitle>
+          <ModalLoginDescrition>
+            Coloque os dados necessarios para cadastrar sua conta
+          </ModalLoginDescrition>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div>
+              <ModalLoginInputText>Nome</ModalLoginInputText>
+              <ModalLoginInput placeholder="Nome" type="text" autoFocus />
+            </div>
+            <div>
+              <ModalLoginInputText>CPF</ModalLoginInputText>
+              <ModalLoginInput placeholder="CPF" type="text" />
+            </div>
+          </div>
+          <ModalLoginInputText>Email</ModalLoginInputText>
+          <ModalLoginInput placeholder="Email" type="email" autoFocus />
+          <ModalLoginInputText>Senha</ModalLoginInputText>
+          <ModalLoginInput placeholder="Password" type="password" />
+          <ModalLoginInputText>Senha Novamente</ModalLoginInputText>
+          <ModalLoginInput placeholder="Password" type="password" />
+        </div>
+        <div style={{ display: "flex", marginTop: "20px", justifyContent: "center", width: "100%" }}>
+          <ModalLoginButton>Cadastrar</ModalLoginButton>
+        </div>
       </ModalComponent>
     </>
   );

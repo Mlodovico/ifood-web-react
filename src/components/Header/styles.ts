@@ -79,7 +79,7 @@ export const ModalLoginInput = styled.input`
 `;
 
 export const ModalLoginButton = styled.button`
-  width: 100%;
+  width: 80%;
   height: 50px;
   border-radius: 12px;
   font-weight: bold;
