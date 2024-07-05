@@ -16,14 +16,42 @@ import {
   ModalLoginWrapper,
 } from "./styles";
 
+interface formSignUpInterface {
+  completedName: string;
+  document: string;
+  email: string;
+  password: string;
+}
+
+interface formLoginInterface {
+  email: string;
+  password: string;
+}
+
 export const HeaderComponent: FC = () => {
   const { toggleTheme } = useTheme();
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
   const [showSignUpModal, setShowSignUpModal] = useState<boolean>(false);
+  const [formLoginData, setFormLoginData] = useState<formLoginInterface>({
+    email: "",
+    password: "",
+  });
+  const [formData, setFormData] = useState<formSignUpInterface>({
+    completedName: "",
+    document: "",
+    email: "",
+    password: "",
+  });
 
   const toggleModal = () => {
     setShowLoginModal(!showLoginModal);
   };
+
+  const checkPassword = (password: string): boolean => {
+    return formData.password === password ? true : false;
+  };
+
+  console.log(formData);
 
   return (
     <>
@@ -59,7 +87,13 @@ export const HeaderComponent: FC = () => {
             <ModalLoginInputText>Senha</ModalLoginInputText>
             <ModalLoginInput placeholder="Password" type="password" />
           </div>
-          <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "20px",
+            }}
+          >
             <ModalLoginButton>Acessar</ModalLoginButton>
           </div>
         </ModalLoginWrapper>
@@ -73,21 +107,56 @@ export const HeaderComponent: FC = () => {
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               <ModalLoginInputText>Nome</ModalLoginInputText>
-              <ModalLoginInput placeholder="Nome" type="text" autoFocus />
+              <ModalLoginInput
+                placeholder="Nome completo"
+                type="text"
+                onChange={(e) =>
+                  setFormData({ ...formData, completedName: e.target.value })
+                }
+              />
             </div>
             <div>
               <ModalLoginInputText>CPF</ModalLoginInputText>
-              <ModalLoginInput placeholder="CPF" type="text" />
+              <ModalLoginInput
+                placeholder="CPF"
+                type="text"
+                onChange={(e) =>
+                  setFormData({ ...formData, document: e.target.value })
+                }
+              />
             </div>
           </div>
           <ModalLoginInputText>Email</ModalLoginInputText>
-          <ModalLoginInput placeholder="Email" type="email" autoFocus />
+          <ModalLoginInput
+            placeholder="Email"
+            type="email"
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+          />
           <ModalLoginInputText>Senha</ModalLoginInputText>
-          <ModalLoginInput placeholder="Password" type="password" />
+          <ModalLoginInput
+            placeholder="Password"
+            type="password"
+            onChange={(e) =>
+              setFormData({ ...formData, password: e.target.value })
+            }
+          />
           <ModalLoginInputText>Senha Novamente</ModalLoginInputText>
-          <ModalLoginInput placeholder="Password" type="password" />
+          <ModalLoginInput
+            placeholder="Password"
+            type="password"
+            onChange={(e) => checkPassword(e.target.value)}
+          />
         </div>
-        <div style={{ display: "flex", marginTop: "20px", justifyContent: "center", width: "100%" }}>
+        <div
+          style={{
+            display: "flex",
+            marginTop: "20px",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
           <ModalLoginButton>Cadastrar</ModalLoginButton>
         </div>
       </ModalComponent>
