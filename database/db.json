@@ -1,0 +1,92 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "title": "Massas",
+      "description": "Explore a riqueza das massas italianas com uma seleção de pratos irresistíveis. Buon appetito!",
+      "options": [
+        {
+          "id": 1,
+          "title": "Pizza",
+          "price": 54.4
+        },
+        {
+          "id": 2,
+          "title": "Lasanha 500g",
+          "price": 32.4
+        },
+        {
+          "id": 3,
+          "title": "Macarrao 500g",
+          "price": 30.4
+        },
+        {
+          "id": 4,
+          "title": "Macarrao 1kg",
+          "price": 39.9
+        },
+        {
+          "id": 5,
+          "title": "Lasanha 1kg",
+          "price": 41.9
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lanches",
+      "description": "Descubra uma seleção deliciosa de lanches que agradam todos os paladares. Aproveite um momento saboroso e prático!",
+      "options": [
+        {
+          "id": 1,
+          "title": "X-Salada",
+          "price": 9.9
+        },
+        {
+          "id": 2,
+          "title": "X-Burguer",
+          "price": 9.9
+        },
+        {
+          "id": 3,
+          "title": "X-Bacon",
+          "price": 9.9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sobremesas",
+      "description": "Mergulhe no mundo das sobremesas irresistiíveis, onde cada doce é uma obra-prima de sabor e textura.",
+      "options": [
+        {
+          "id": 1,
+          "title": "Torta de Chocolate",
+          "price": 9.9
+        },
+        {
+          "id": 2,
+          "title": "Torta de Morango",
+          "price": 9.9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Especiarias",
+      "description": "Explore o mundo aromático das especiarias que elevam qualquer prato a um novo patamar. ",
+      "options": [
+        {
+          "id": 1,
+          "title": "Coco Ralado",
+          "price": 9.9
+        },
+        {
+          "id": 2,
+          "title": "Coco Cremoso",
+          "price": 9.9
+        }
+      ]
+    }
+  ]
+}
