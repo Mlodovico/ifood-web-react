@@ -8,6 +8,19 @@ export const Container = styled.div`
   width: 100%;
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+
+  @media (min-width: 600px) and (max-width: 1199px) {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0px;
+  }
+`
+
 export const Carousel = styled.div`
   display: flex;
   justify-content: flex-start;

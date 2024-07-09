@@ -5,13 +5,12 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  width: 60%;
+  width: 100%;
   border-radius: 12px;
   margin-top: 20px;
   background-color: #ea1d2c;
 
   @media (min-width: 600px) and (max-width: 1199px) {
-    width: 100%;
     margin-top: 0;
     border-radius: 0px;
   }
@@ -69,7 +68,6 @@ export const ModalLoginInput = styled.input`
   height: 60px;
   border-radius: 12px;
   border: none;
-  background: #DCDCDC;
   padding-left: 5px;
   padding-right: 5px;
 `;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { Container, Carousel } from "./styles";
+import { Container, Carousel, Wrapper } from "./styles";
 
 import { HeaderComponent } from "../../components/Header";
 import { CardsComponent } from "../../components/Cards";
@@ -22,16 +22,18 @@ export const HomeScreen = () => {
 
   return (
     <Container>
-      <HeaderComponent />
-      <Carousel>
-        {categorys !== undefined &&
-          categorys.map((category) => (
-            <CardsComponent
-              title={category.name}
-              subtitle={category.description}
-            />
-          ))}
-      </Carousel>
+      <Wrapper>
+        <HeaderComponent />
+        <Carousel>
+          {categorys !== undefined &&
+            categorys.map((category) => (
+              <CardsComponent
+                title={category.name}
+                subtitle={category.description}
+              />
+            ))}
+        </Carousel>
+      </Wrapper>
     </Container>
   );
 };
