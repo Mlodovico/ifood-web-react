@@ -1,5 +1,7 @@
-import React, { useEffect, useState, FC } from "react";
+import React, { useEffect, useState, FC, useContext } from "react";
 import { Container, Modal } from "./styles";
+import { ThemeContext } from "styled-components";
+import { useTheme } from "../../context/ThemeContext";
 
 interface ModalComponentProps {
   children: React.ReactNode;
@@ -7,6 +9,7 @@ interface ModalComponentProps {
 }
 
 export const ModalComponent: FC<ModalComponentProps> = ({ children, flagModal }) => {
+  const {theme} = useTheme();
   const [showModal, setShowModal] = useState(flagModal);
 
   useEffect(() => {
@@ -17,7 +20,7 @@ export const ModalComponent: FC<ModalComponentProps> = ({ children, flagModal })
     <>
       {showModal && (
         <Container onClick={() => setShowModal(!showModal)}>
-          <Modal onClick={(e) => e.stopPropagation()}>{children}</Modal>
+          <Modal theme={theme} onClick={(e) => e.stopPropagation()}>{children}</Modal>
         </Container>
       )}
     </>

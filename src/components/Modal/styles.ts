@@ -20,5 +20,6 @@ export const Modal = styled.div`
     width: 28rem;
     padding: 20px;
     border-radius: 12px;
-    background-color: #ffffff;
+    color: ${({ theme }) => theme.color};
+    background-color: ${({ theme }) => theme.background};
 `

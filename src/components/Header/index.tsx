@@ -15,13 +15,9 @@ import {
   ModalLoginInputText,
   ModalLoginWrapper,
 } from "./styles";
+import { accountInterface } from "../../types/accountInterface";
 
-interface formSignUpInterface {
-  completedName: string;
-  document: string;
-  email: string;
-  password: string;
-}
+
 
 interface formLoginInterface {
   email: string;
@@ -29,23 +25,29 @@ interface formLoginInterface {
 }
 
 export const HeaderComponent: FC = () => {
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
   const [showSignUpModal, setShowSignUpModal] = useState<boolean>(false);
   const [formLoginData, setFormLoginData] = useState<formLoginInterface>({
     email: "",
     password: "",
   });
-  const [formData, setFormData] = useState<formSignUpInterface>({
+  const [formData, setFormData] = useState<accountInterface>({
     completedName: "",
-    document: "",
     email: "",
+    document: "",
+    birthDate: new Date(),
     password: "",
+    premium: false,
   });
 
   const toggleModal = () => {
     setShowLoginModal(!showLoginModal);
   };
+
+  const handleBirthDate = (date: string) => {
+    console.log(date);
+  }
 
   const checkPassword = (password: string): boolean => {
     return formData.password === password ? true : false;
@@ -112,7 +114,7 @@ export const HeaderComponent: FC = () => {
           </ModalLoginDescrition>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
-              <ModalLoginInputText>Nome</ModalLoginInputText>
+              <ModalLoginInputText>Nome:</ModalLoginInputText>
               <ModalLoginInput
                 placeholder="Nome completo"
                 type="text"
@@ -122,7 +124,7 @@ export const HeaderComponent: FC = () => {
               />
             </div>
             <div>
-              <ModalLoginInputText>CPF</ModalLoginInputText>
+              <ModalLoginInputText>CPF:</ModalLoginInputText>
               <ModalLoginInput
                 placeholder="CPF"
                 type="text"
@@ -132,7 +134,7 @@ export const HeaderComponent: FC = () => {
               />
             </div>
           </div>
-          <ModalLoginInputText>Email</ModalLoginInputText>
+          <ModalLoginInputText>Email:</ModalLoginInputText>
           <ModalLoginInput
             placeholder="Email"
             type="email"
@@ -140,7 +142,13 @@ export const HeaderComponent: FC = () => {
               setFormData({ ...formData, email: e.target.value })
             }
           />
-          <ModalLoginInputText>Senha</ModalLoginInputText>
+          <ModalLoginInputText>Data de Nascimento:</ModalLoginInputText>
+          <ModalLoginInput
+            placeholder="Data de nascimento"
+            type="date"
+            onChange={(e) => handleBirthDate(e.target.value)}
+          />
+          <ModalLoginInputText>Senha:</ModalLoginInputText>
           <ModalLoginInput
             placeholder="Password"
             type="password"
@@ -148,7 +156,7 @@ export const HeaderComponent: FC = () => {
               setFormData({ ...formData, password: e.target.value })
             }
           />
-          <ModalLoginInputText>Senha Novamente</ModalLoginInputText>
+          <ModalLoginInputText>Senha Novamente:</ModalLoginInputText>
           <ModalLoginInput
             placeholder="Password"
             type="password"

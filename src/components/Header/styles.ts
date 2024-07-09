@@ -53,7 +53,6 @@ export const Subject = styled.p`
 
 export const ModalLoginTitle = styled.p`
   font-size: 1.5rem;
-  color: #000000;
   font-weight: bold;
   text-align: center;
   margin-bottom: 1rem;
@@ -61,7 +60,6 @@ export const ModalLoginTitle = styled.p`
 
 export const ModalLoginDescrition = styled.p`
   font-size: 1rem;
-  color: #000000;
   text-align: center;
   margin-bottom: 1rem;
 `;
@@ -72,10 +70,8 @@ export const ModalLoginInput = styled.input`
   border-radius: 12px;
   border: none;
   background: #DCDCDC;
-
-  ::focus {
-    border-color: red;
-  }
+  padding-left: 5px;
+  padding-right: 5px;
 `;
 
 export const ModalLoginButton = styled.button`
@@ -91,7 +87,7 @@ export const ModalLoginButton = styled.button`
 
 export const ModalLoginInputText = styled.p`
   font-size: 1rem;
-  color: #000000;
+  font-weight: bold;
   text-align: left;
 `;
 
