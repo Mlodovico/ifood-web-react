@@ -3,7 +3,6 @@ import "@testing-library/jest-dom/extend-expect";
 import { ThemeProvider } from "../../context/ThemeContext";
 
 import { ModalComponent } from "./index";
-import { lightTheme } from "../../assets/theme";
 
 describe("Modal Component", () => {
   it("should render Modal Component", () => {
