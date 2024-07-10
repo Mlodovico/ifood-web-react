@@ -95,5 +95,5 @@ export const ModalLoginWrapper = styled.div`
   align-items: left;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
+  width: 90%;
 `;

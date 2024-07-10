@@ -3,6 +3,7 @@ import { lightTheme, darkTheme, Theme } from "../assets/theme";
 
 interface ThemeContextType {
   theme: Theme;
+  isLightTheme: boolean;
   toggleTheme: () => void;
 }
 
@@ -17,7 +18,7 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <ThemeContext.Provider value={{ theme, toggleTheme, isLightTheme: theme === lightTheme }}>
         {children}
       </ThemeContext.Provider>
     </>
